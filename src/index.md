@@ -42,7 +42,7 @@ title: "Bookmarks"
 
 ![Netgear icon](https://cdn.simpleicons.org/netgear?viewbox=auto&size=20) [8P Managed](http://10.88.88.2/index.htm)
 
-![Asus icon](https://cdn.simpleicons.org/asus?viewbox=auto&size=20) [Asus AP](http://10.88.88.2/index.htm)
+![Asus icon](https://cdn.simpleicons.org/asus?viewbox=auto&size=20) [Asus AP](http://10.88.88.1/Main_Login.asp)
 
 ⛭ [Vera Hub](https://vera.lab.sarlaac.ca/cmh/#dashboard)
 
