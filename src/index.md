@@ -18,7 +18,7 @@ title: "Bookmarks"
 
 ![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini](https://proxmini.lab.sarlaac.ca/)
 
-![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini2](https://proxmini.lab.sarlaac.ca/)
+![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini2](https://proxmini2.lab.sarlaac.ca/)
 
 ![Portainer icon](https://cdn.simpleicons.org/portainer?viewbox=auto&size=20) [Portainer](https://portainer.lab.sarlaac.ca/)
 
