@@ -1,0 +1,24 @@
+{
+  "name": "eleventy-github-pages-starter",
+  "version": "1.0.0",
+  "description": "A starter repository for Eleventy on GitHub Pages.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "static-site",
+    "github-pages"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.2.0"
+  }
+}

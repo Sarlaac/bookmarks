@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>📑 Bookmarks</h1>
+    </header>
+
+    <div class="content-wrapper">
+        <aside class="sidebar">
+            <h2>Navigation</h2>
+            <nav class="main-nav">
+                <a href="https://docs.sarlaac.ca/bookmarks/" class="nav-item">Bookmarks</a>
+                <a href="https://homepage.lab.sarlaac.ca" class="nav-item">Homelab</a>
+                <a href="/" class="nav-item">Documents Blog</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            {{ content | safe }}
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; {{ "now" | date('yyyy') }} Built with 11ty.</p>
+    </footer>
+
+</body>
+</html>

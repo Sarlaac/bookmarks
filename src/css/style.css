@@ -1,0 +1,122 @@
+/* --- 1. CSS Variables (Custom Properties) for Dark/Green Theme --- */
+
+:root {
+    --color-bg: #121212;         /* Very Dark Background */
+    --color-text: #e0e0e0;       /* Light Gray Text */
+    --color-primary: #00FF00;    /* Bright Green Accent */
+    --color-secondary: #006400;  /* Dark Green for contrast */
+    --color-main-bg: #484848;    /* Slightly lighter than body background */
+    --color-border: #0f4d06;        /* Darker border */
+}
+
+/* --- 2. Base Styles --- */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* --- 3. Header & Footer --- */
+
+.site-header {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-start; /* Simplified layout */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1em;
+    margin-top: 30px;
+    color: var(--color-text);
+    border-top: 1px solid var(--color-border);
+}
+
+
+/* --- 4. Two-Column Layout (Left Navigation) --- */
+
+.content-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+    padding: 20px;
+    margin-right: 20px;
+    background: var(--color-main-bg);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border: 1px solid var(--color-border);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: var(--color-primary); /* Green accent for section title */
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 10px;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--color-border);
+    transition: color 0.2s;
+}
+
+.nav-item:last-child {
+    border-bottom: none;
+}
+
+.nav-item:hover {
+    color: var(--color-primary); /* Green hover effect */
+    text-decoration: underline;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px 30px;
+    background: var(--color-main-bg);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border: 1px solid var(--color-border);
+}
+
+/* Ensure links in main content are green */
+.main-content a {
+    color: var(--color-primary);
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 800px) {
+    .content-wrapper {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .sidebar {
+        flex: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

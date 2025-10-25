@@ -1,0 +1,44 @@
+name: Deploy Eleventy Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Workflow runs on pushes to the 'main' branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to publish the build artifact
+      pages: write # Needed to deploy to GitHub Pages
+      id-token: write # Needed to authenticate with GitHub Pages
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a modern Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Eleventy site
+        # This runs the 'build' script defined in package.json
+        run: npm run build
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # The artifact will contain the static files from the build output
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
