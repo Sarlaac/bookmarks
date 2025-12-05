@@ -4,6 +4,12 @@ title: "Bookmarks"
 ---
 <div class="content">
 
+## Navigation
+
+[Homelab](https://homepage.lab.sarlaac.ca")
+
+[Documents Blog](/)
+
 ## Developer
 
 ![Github icon](https://cdn.simpleicons.org/github?viewbox=auto&size=20) [Github](https://github.com/)
