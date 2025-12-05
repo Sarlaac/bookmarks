@@ -69,7 +69,6 @@ h2 {
     width: 20px;
     height: 20px;
     transition: transform 0.2s;
-    filter: invert(0.9) hue-rotate(100deg); /* Optional: Invert/colorize icons for better dark theme visibility */
 }
 
 /* -------------------------------------------
