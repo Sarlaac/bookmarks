@@ -12,9 +12,9 @@ title: "Bookmarks"
 
 ## Popular
 
-💪🏻 [Exercise](https://www.wellnessliving.com/Wl/Video/Catalog/Catalog.html?k_business=375068&k_video_category=qldswJ0r)
+<span class="emoji-icon">💪🏻</span> [Exercise](https://www.wellnessliving.com/Wl/Video/Catalog/Catalog.html?k_business=375068&k_video_category=qldswJ0r)
 
-🎲 [BGA](https://boardgamearena.com/)
+​<span class="emoji-icon">🎲</span> [BGA](https://boardgamearena.com/)
 
 ## Servers
 
@@ -46,9 +46,9 @@ title: "Bookmarks"
 
 ![Asus icon](https://cdn.simpleicons.org/asus?viewbox=auto&size=20) [Asus AP](http://10.88.88.1/Main_Login.asp)
 
-⛭ [Vera Hub](https://vera.lab.sarlaac.ca/cmh/#dashboard)
+<span class="emoji-icon">⛭</span> [Vera Hub](https://vera.lab.sarlaac.ca/cmh/#dashboard)
 
-💾 [Terra Master](https://nas.lab.sarlaac.ca/tos/index.php?user/login)
+<span class="emoji-icon">💾</span> [Terra Master](https://nas.lab.sarlaac.ca/tos/index.php?user/login)
 
 ## Work
 
