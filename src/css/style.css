@@ -1,27 +1,24 @@
 /*
  * CSS for styling the Markdown-generated list of links as cards.
- *
- * ASSUMPTION: The Markdown `![icon](url) [Link](url)` renders as a
- * block-level element (like a <p> or <div>) containing the <img> and <a> tags.
- * We are targeting the <p> elements immediately following <h2> tags
- * and using the "stretched link" technique to make the whole card clickable.
+ * Dark Theme: Black background, dark grey cards, vibrant green accents.
  */
 
 /* -------------------------------------------
- * Global Typography & Layout
+ * Global Typography & Layout (Dark Theme Base)
  * ------------------------------------------- */
 
-/* Apply a clean font and basic layout for demonstration */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f4f7f9;
+    /* Dark Theme Background */
+    background-color: #0d0d0d; /* Near-black background */
     padding: 1rem;
+    color: #e6e6e6; /* Light grey text for general body content */
 }
 
 /* Style the section headers (e.g., "## Developer") */
 h2 {
-    color: #1a202c;
-    border-bottom: 2px solid #e2e8f0;
+    color: #4CAF50; /* Vibrant green for section titles */
+    border-bottom: 2px solid #383838; /* Dark border separator */
     padding-bottom: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
@@ -36,27 +33,29 @@ h2 {
 /* Target the container for each link group, which is likely a <p> tag */
 .content p {
     /* Card Container Styles */
-    position: relative; /* CRITICAL: Establishes a positioning context for the stretched link */
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 1rem; /* Space between icon/emoji and link text */
+    gap: 1rem;
 
-    /* Visual Card Aesthetics */
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    /* Visual Card Aesthetics (Lighter Grey Card) */
+    background-color: #1a1a1a; /* Dark grey for the card surface */
+    border: 1px solid #333333;
     border-radius: 12px;
-    padding: 1rem 1.5rem; /* Padding inside the card */
-    margin-bottom: 0.75rem; /* Space between cards */
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    /* Subtle shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Hover and Focus Effect for Card */
 .content p:hover {
-    background-color: #f0f8ff; /* Light blue background on hover */
-    border-color: #3b82f6; /* Accent border color */
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1), 0 4px 6px -4px rgba(59, 130, 246, 0.1);
+    background-color: #262626; /* Slightly lighter card on hover */
+    border-color: #4CAF50; /* Vibrant green accent border on hover */
+    /* Stronger shadow with a green glow effect */
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
     transform: translateY(-2px);
 }
 
@@ -66,12 +65,11 @@ h2 {
 
 /* Target <img> tags (from the SimpleIcons URLs) */
 .content p img {
-    /* The simpleicons are already 20x20, but this ensures consistency */
     flex-shrink: 0;
     width: 20px;
     height: 20px;
-    /* Optional: Slight color shift on hover for visual feedback */
     transition: transform 0.2s;
+    filter: invert(0.9) hue-rotate(100deg); /* Optional: Invert/colorize icons for better dark theme visibility */
 }
 
 /* -------------------------------------------
@@ -83,41 +81,41 @@ h2 {
     /* Style the Link Text */
     font-size: 1.125rem;
     font-weight: 600;
-    color: #2563eb; /* Primary link color */
-    text-decoration: none; /* Remove underline */
-    z-index: 10; /* Ensures the text is above the stretch element */
+    color: #81C784; /* Lighter green text for the link itself */
+    text-decoration: none;
+    z-index: 10;
     transition: color 0.2s;
 }
 
-/* Stretched Link Pattern (The magic for clickability) */
+/* Stretched Link Pattern (Covers the whole card) */
 .content p a {
-    /* The second anchor is absolute and covers the entire <p> element */
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 5; /* Place it above the background but below the visible text/icon */
+    z-index: 5;
 }
 
-/* Reset the specific styles for the visible link text element */
+/* Reset specific styles for the visible link text element */
 .content p a:not(:first-child) {
     position: static;
     display: block;
     z-index: 10; /* Bring the actual link text back to the front */
+    color: #A5D6A7; /* Ensure the visible link text is a soft green */
 }
 
-/* Optional: Make the link text darker on card hover */
+/* Optional: Make the link text brighter on card hover */
 .content p:hover a {
-    color: #1e40af;
+    color: #C8E6C9; /* Brightest green on hover */
 }
 
-/* Style for pure text/emoji icons (like 💪🏻 or 🎲) */
-/* Assuming the emoji or text is wrapped in a span or is direct text node before the <a> */
-.content p > *:first-child:not(a) {
+/* Style for pure text/emoji icons (using the new class) */
+.content p .emoji-icon {
     flex-shrink: 0;
-    font-size: 1.5rem; /* Make the emojis a bit larger */
+    font-size: 1.5rem;
     line-height: 1;
+    /* Emojis don't need color change, but they are properly aligned */
 }
 
 /* Clear the default margin/padding from the main content links to ensure clean cards */
