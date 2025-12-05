@@ -1,122 +1,126 @@
-/* --- 1. CSS Variables (Custom Properties) for Dark/Green Theme --- */
+/*
+ * CSS for styling the Markdown-generated list of links as cards.
+ *
+ * ASSUMPTION: The Markdown `![icon](url) [Link](url)` renders as a
+ * block-level element (like a <p> or <div>) containing the <img> and <a> tags.
+ * We are targeting the <p> elements immediately following <h2> tags
+ * and using the "stretched link" technique to make the whole card clickable.
+ */
 
-:root {
-    --color-bg: #121212;         /* Very Dark Background */
-    --color-text: #e0e0e0;       /* Light Gray Text */
-    --color-primary: #00FF00;    /* Bright Green Accent */
-    --color-secondary: #006400;  /* Dark Green for contrast */
-    --color-main-bg: #484848;    /* Slightly lighter than body background */
-    --color-border: #0f4d06;        /* Darker border */
-}
+/* -------------------------------------------
+ * Global Typography & Layout
+ * ------------------------------------------- */
 
-/* --- 2. Base Styles --- */
-
+/* Apply a clean font and basic layout for demonstration */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f9;
+    padding: 1rem;
 }
 
-/* --- 3. Header & Footer --- */
+/* Style the section headers (e.g., "## Developer") */
+h2 {
+    color: #1a202c;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 
-.site-header {
-    background: var(--color-secondary);
-    color: var(--color-text);
-    padding: 1rem 2rem;
+/* -------------------------------------------
+ * Card Styling (The <p> element is the Card)
+ * ------------------------------------------- */
+
+/* Target the container for each link group, which is likely a <p> tag */
+.content p {
+    /* Card Container Styles */
+    position: relative; /* CRITICAL: Establishes a positioning context for the stretched link */
     display: flex;
-    justify-content: flex-start; /* Simplified layout */
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    gap: 1rem; /* Space between icon/emoji and link text */
+
+    /* Visual Card Aesthetics */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem 1.5rem; /* Padding inside the card */
+    margin-bottom: 0.75rem; /* Space between cards */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
 }
 
-.site-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
+/* Hover and Focus Effect for Card */
+.content p:hover {
+    background-color: #f0f8ff; /* Light blue background on hover */
+    border-color: #3b82f6; /* Accent border color */
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1), 0 4px 6px -4px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
 }
 
-.site-footer {
-    text-align: center;
-    padding: 1em;
-    margin-top: 30px;
-    color: var(--color-text);
-    border-top: 1px solid var(--color-border);
+/* -------------------------------------------
+ * Icon/Image Styling
+ * ------------------------------------------- */
+
+/* Target <img> tags (from the SimpleIcons URLs) */
+.content p img {
+    /* The simpleicons are already 20x20, but this ensures consistency */
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    /* Optional: Slight color shift on hover for visual feedback */
+    transition: transform 0.2s;
 }
 
+/* -------------------------------------------
+ * Link Styling (The <a> tag is the Link Text)
+ * ------------------------------------------- */
 
-/* --- 4. Two-Column Layout (Left Navigation) --- */
-
-.content-wrapper {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-.sidebar {
-    flex: 0 0 250px;
-    padding: 20px;
-    margin-right: 20px;
-    background: var(--color-main-bg);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    border: 1px solid var(--color-border);
-}
-
-.sidebar h2 {
-    margin-top: 0;
-    color: var(--color-primary); /* Green accent for section title */
-    border-bottom: 2px solid var(--color-secondary);
-    padding-bottom: 10px;
-}
-
-.main-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav-item {
-    color: var(--color-text);
-    text-decoration: none;
-    padding: 8px 0;
-    border-bottom: 1px dashed var(--color-border);
+/* Target the actual link element */
+.content p a {
+    /* Style the Link Text */
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2563eb; /* Primary link color */
+    text-decoration: none; /* Remove underline */
+    z-index: 10; /* Ensures the text is above the stretch element */
     transition: color 0.2s;
 }
 
-.nav-item:last-child {
-    border-bottom: none;
+/* Stretched Link Pattern (The magic for clickability) */
+.content p a {
+    /* The second anchor is absolute and covers the entire <p> element */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5; /* Place it above the background but below the visible text/icon */
 }
 
-.nav-item:hover {
-    color: var(--color-primary); /* Green hover effect */
-    text-decoration: underline;
+/* Reset the specific styles for the visible link text element */
+.content p a:not(:first-child) {
+    position: static;
+    display: block;
+    z-index: 10; /* Bring the actual link text back to the front */
 }
 
-.main-content {
-    flex-grow: 1;
-    padding: 20px 30px;
-    background: var(--color-main-bg);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    border: 1px solid var(--color-border);
+/* Optional: Make the link text darker on card hover */
+.content p:hover a {
+    color: #1e40af;
 }
 
-/* Ensure links in main content are green */
-.main-content a {
-    color: var(--color-primary);
+/* Style for pure text/emoji icons (like 💪🏻 or 🎲) */
+/* Assuming the emoji or text is wrapped in a span or is direct text node before the <a> */
+.content p > *:first-child:not(a) {
+    flex-shrink: 0;
+    font-size: 1.5rem; /* Make the emojis a bit larger */
+    line-height: 1;
 }
 
-/* Responsive adjustment for smaller screens */
-@media (max-width: 800px) {
-    .content-wrapper {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-    .sidebar {
-        flex: auto;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+/* Clear the default margin/padding from the main content links to ensure clean cards */
+.content p:last-child {
+    margin-bottom: 0;
 }
