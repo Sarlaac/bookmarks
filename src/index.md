@@ -47,3 +47,9 @@ title: "Bookmarks"
 ⛭ [Vera Hub](https://vera.lab.sarlaac.ca/cmh/#dashboard)
 
 💾 [Terra Master](https://nas.lab.sarlaac.ca/tos/index.php?user/login)
+
+## Work
+
+[Outlook](https://outlook.office.com/mail/0/?deeplink=mail%2F0%2F%3Fnlp%3D0)
+
+[Teams](https://teams.microsoft.com/v2/)
