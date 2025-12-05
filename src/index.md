@@ -2,6 +2,8 @@
 layout: "base.njk"
 title: "Bookmarks"
 ---
+<div class="content">
+
 ## Developer
 
 ![Github icon](https://cdn.simpleicons.org/github?viewbox=auto&size=20) [Github](https://github.com/)
@@ -53,3 +55,5 @@ title: "Bookmarks"
 [Outlook](https://outlook.office.com/mail/0/?deeplink=mail%2F0%2F%3Fnlp%3D0)
 
 [Teams](https://teams.microsoft.com/v2/)
+
+</div>
