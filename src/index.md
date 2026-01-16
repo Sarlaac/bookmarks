@@ -10,6 +10,8 @@ title: "Bookmarks"
 
 [Documents Blog](/)
 
+[Work](/bookmarks/work md)
+
 ## Developer
 
 ![Github icon](https://cdn.simpleicons.org/github?viewbox=auto&size=20) [Github](https://github.com/)
