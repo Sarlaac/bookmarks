@@ -10,7 +10,7 @@ title: "Bookmarks"
 
 [Documents Blog](/)
 
-[Work](/bookmarks/work.html)
+[Work](/bookmarks/work)
 
 ## Developer
 
