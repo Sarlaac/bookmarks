@@ -18,8 +18,6 @@ title: "Bookmarks"
 
 ## Popular
 
-<span class="emoji-icon">💪🏻</span> [Exercise](https://www.wellnessliving.com/Wl/Video/Catalog/Catalog.html?k_business=375068&k_video_category=qldswJ0r)
-
 ​<span class="emoji-icon">🎲</span> [BGA](https://boardgamearena.com/)
 
 ## Servers
@@ -61,5 +59,7 @@ title: "Bookmarks"
 [Outlook](https://outlook.office.com/mail/0/?deeplink=mail%2F0%2F%3Fnlp%3D0)
 
 [Teams](https://teams.microsoft.com/v2/)
+
+[Launch](https://launch.nutrien.com)
 
 </div>
