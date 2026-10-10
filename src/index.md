@@ -22,7 +22,7 @@ title: "Bookmarks"
 
 ## Servers
 
-![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini50](https://proxmini50.sarlaac.ca/)
+![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini50](https://proxmini2.lab.sarlaac.ca/)
 
 ![Portainer icon](https://cdn.simpleicons.org/portainer?viewbox=auto&size=20) [Portainer](https://portainer.lab.sarlaac.ca/)
 
@@ -32,13 +32,13 @@ title: "Bookmarks"
 
 ![Nginx icon](https://cdn.simpleicons.org/nginxproxymanager?viewbox=auto&size=20) [Proxy Manager](https://lab.sarlaac.ca/)
 
-![Pihole icon](https://cdn.simpleicons.org/pihole?viewbox=auto&size=20) [Pi Hole1](https://dns.lab.sarlaac.ca/admin/login)
+![Pihole icon](https://cdn.simpleicons.org/pihole?viewbox=auto&size=20) [Pi Hole17](https://pi17.sarlaac.ca/admin/login)
 
-![Pihole icon](https://cdn.simpleicons.org/pihole?viewbox=auto&size=20) [Pi Hole2](https://dns2.lab.sarlaac.ca/admin/login)
+![Pihole icon](https://cdn.simpleicons.org/pihole?viewbox=auto&size=20) [Pi Hole18](https://pi18.sarlaac.ca/admin/login)
 
 ![Home Assist icon](https://cdn.simpleicons.org/homeassistant?viewbox=auto&size=20) [Home Assistant](https://ha.lab.sarlaac.ca/)
 
-![Immich icon](https://cdn.simpleicons.org/immich?viewbox=auto&size=20) [Immich Photos](http://docker-vm2.lan:2283/photos)
+![Immich icon](https://cdn.simpleicons.org/immich?viewbox=auto&size=20) [Immich Photos](http://immich.sarlaac.ca:2283/photos)
 
 ## Network
 
