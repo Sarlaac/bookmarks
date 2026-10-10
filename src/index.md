@@ -22,9 +22,7 @@ title: "Bookmarks"
 
 ## Servers
 
-![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini2](https://proxmini2.lab.sarlaac.ca/)
-
-![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini3](https://proxmini3.lab.sarlaac.ca/)
+![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini50](https://proxmini50.sarlaac.ca/)
 
 ![Portainer icon](https://cdn.simpleicons.org/portainer?viewbox=auto&size=20) [Portainer](https://portainer.lab.sarlaac.ca/)
 
@@ -48,11 +46,11 @@ title: "Bookmarks"
 
 ![Netgear icon](https://cdn.simpleicons.org/netgear?viewbox=auto&size=20) [8P Managed](http://10.88.88.2/index.htm)
 
-![Asus icon](https://cdn.simpleicons.org/asus?viewbox=auto&size=20) [Asus AP](http://10.88.88.1/Main_Login.asp)
+![Asus icon](https://cdn.simpleicons.org/asus?viewbox=auto&size=20) [Asus AP](http://Gate.sarlaac.ca/Main_Login.asp)
 
 <span class="emoji-icon">⛭</span> [Vera Hub](https://vera.lab.sarlaac.ca/cmh/#dashboard)
 
-<span class="emoji-icon">💾</span> [Terra Master](https://nas.lab.sarlaac.ca/tos/index.php?user/login)
+<span class="emoji-icon">💾</span> [Terra Master](https://terra.sarlaac.ca/tos/index.php?user/login)
 
 ## Work
 
