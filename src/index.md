@@ -22,7 +22,7 @@ title: "Bookmarks"
 
 ## Servers
 
-![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini50](https://proxmini2.lab.sarlaac.ca/)
+![Proxmox icon](https://cdn.simpleicons.org/proxmox?viewbox=auto&size=20) [Proxmini50](http://proxmini50.sarlaac.ca/)
 
 ![Portainer icon](https://cdn.simpleicons.org/portainer?viewbox=auto&size=20) [Portainer](https://portainer.lab.sarlaac.ca/)
 
